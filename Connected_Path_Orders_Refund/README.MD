@@ -5,17 +5,18 @@
 *Use-Case/Model Description:*
     This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs"). This allows for a Partner to onboard a merchant and obtain permissions to facilitate transactions from the consumer (`payer`) to the merchant (`payee`).
 
-Inline-style: 
+Model Diagram: 
 ![Model Account Diagram](CP_O_Refund_Diagram.png)
 
-*Postman Collection:* [https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection")
-*PayPal Product API Executor:* [https://www.paypal.com/apex/home](https://www.paypal.com/apex/home "Official PayPal Demo API's")
+**Postman Collection:** [https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection")
+
+**PayPal Product API Executor:** [https://www.paypal.com/apex/home](https://www.paypal.com/apex/home "Official PayPal Demo API's")
 
 ## Account Setup and Configuration
 
     The [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs") requires that the _Partner Account_ is configured for some additional Platform permissions, and this requires review and some approvals to obtain access to particular features of the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs").  As this is true, I have configured a [PayPal Sandbox](https://www.sandbox.paypal.com/us/home "PayPal Sandbox Homepage") Account for the purposes of running through the samples of this use-case.
 
-    PayPal Sandbox Testing Credentials:
+    **PayPal Sandbox Testing Credentials:**
 
     ```json
     {
@@ -26,7 +27,7 @@ Inline-style:
 
 ## Authentication
 
-*Description:*
+**Description:**
     Third-Party Authentication will allow the Partner to Authenticate to PayPal using the Partner's `client_id` and `client_secret` to obtain an `access_token` that will be provided in the `Authentication` `header` of the API Request.  Along with the Partner's `access_token` the Partner will need to provide the `PayPal-Auth-Assertion` `header` which allows for the Partner to provide PayPal with the information on the merchant they are facilitating the API on behalf of.
 
 | PayPal Documentation |
@@ -43,12 +44,12 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 
 ## Onboarding via Connected Path
 
-*Description:*
+**Description:**
     For this sample we'll be using PayPal's [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official Connected Path Documentation").  You may be asking _"What is Connected Path?"_.  The answer is quite straight forward, the [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official Connected Path Documentation") means that the merchant can grant you (the Partner) permissions to act on their behalf, and they have agreed to the PayPal [User Agreement](https://www.paypal.com/us/webapps/mpp/ua/legalhub-full?locale.x=en_US) and will work with PayPal directly on any account inquiries. 
 
     Please read through the [PayPal Partner Program Agreement](https://www.paypal.com/us/webapps/mpp/ua/partner-program-agreement) and/or the [PayPal User Agreement](https://www.paypal.com/us/webapps/mpp/ua/legalhub-full?locale.x=en_US) for additional clarifications on the roles/responsibilities of the Partner and Merchant.
 
-*Partner-Referrals API:*
+**Partner-Referrals API:**
 
     To onboard merchants to our Partner Platform in this sample, we will be using the [Partner Referrals v2 APIs](https://developer.paypal.com/docs/api/partner-referrals/v2/ "Official Partner-Referrals API Documentation"). Using the API to [Create Partner Referral](https://developer.paypal.com/docs/api/partner-referrals/v2/#partner-referrals_create "Official Create Partner Referral API Documentation") will allow the Partner to provide information that they currently have on the merchant, this improves the merchants experience with onboarding, and in the case where the merchant doesn't already have a PayPal Account, it allows them to create one more easily as you have provided the information to _pre-fill_ the pages. 
 
@@ -69,7 +70,7 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 
     The value of the `href` is what you will set in the `data-paypal-button` element's `href` value to, in order to use the _Mini-Browser_ or _"In-Context"_ Sign-up Flow on your site.  The [Partner.js and Mini-Browser Sign-up Documentation](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/#2-add-a-paypal-sign-up-link-on-your-site "Official Mini-Browser Sign-up Documentation") is available for additional information.
 
-*Validate Seller Status:*
+**Validate Seller Status:**
 
     Once the Seller has completed the Sign-Up flow and granted the Partner account the permissions, there will be a Webhook event of `MERCHANT.ONBOARDING.COMPLETED` that will be sent via `POST` to your webhook listener.
 
@@ -140,7 +141,7 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 
 ### Smart Payment Buttons & the JS SDK
 
-*Description:*
+**Description:**
     When [PayPal's Smart Payment Buttons](https://developer.paypal.com/docs/checkout/ "Official PayPal Checkout Documentation") are rendered, the JS SDK is loaded into the page via the `<script>` tag.  There are three key components when loading the JS SDK into the page. First, the `client-id` value should be the value of the *Partner* in this case as we are doing a _Third-Party_ model here. Second, the `merchant-id` value should be the *Merchant's* `merchant_id`. This allows for the _Third-Party_ model to persist on both the client and server sides of the integration. Third, the `data-partner-attribution-id` script parameters value would be the *Partner's* Attribution ID to ensure that the render is associated with the order once the consumer _clicks_ on the button.
 
     *Why is this important?* When the script is loaded with the *Partner's* `client-id` and the *Merchant's* `merchant-id` the data associated can be tied back to the merchant to allow the merchant to offer [PayPal Store Cash](https://www.paypal.com/us/smarthelp/article/what-is-store-cash-and-how-does-it-work-faq4055) to the customer if they don't complete their checkout to help re-engage the customer.
@@ -158,7 +159,7 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 |:------------------------:|
 | [Store Cash Integration](https://gist.github.com/ppnsanders/44dcb36a0ea50f17b76f9d2f0db14b0a "Unofficial Store Cash Integration Documentation") |
 
-*Implementation:*
+**Implementation:**
 
     When you load the [PayPal JS SDK](https://developer.paypal.com/docs/checkout/reference/ "Official PayPal Checkout Documentation") on the client's page, you will dynamically include the *Merchant's* `merchant-id` value in the `<script>` tag.
 
