@@ -86,51 +86,51 @@ Here is an [example of calling this API in my Postman collection](https://docume
 An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations?tracking_id=<TRACKING_ID>` endpoint would look like this:
 
 ```json
-    {
-        "merchant_id": "<MERCHANT_ID>",
-        "tracking_id": "<TRACKING_ID>",
-        "links": [
-            {
-                "href": "/v1/customer/partners/<PARTNER_MERCHANT_ID>/merchant-integrations/<MERCHANT_MERCHANT_ID>",
-                "rel": "get",
-                "method": "GET"
-            }
-        ]
-    }
+{
+    "merchant_id": "<MERCHANT_ID>",
+    "tracking_id": "<TRACKING_ID>",
+    "links": [
+        {
+            "href": "/v1/customer/partners/<PARTNER_MERCHANT_ID>/merchant-integrations/<MERCHANT_MERCHANT_ID>",
+            "rel": "get",
+            "method": "GET"
+        }
+    ]
+}
 ```
 
     An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations/{merchant_id}` endpoint would look like this: 
 
 ```json
-    {
-        "merchant_id": "<MERCHANT_ID>",
-        "tracking_id": "<TRACKING_ID>",
-        "products": [
-            {
-                "name": "MOBILE_PAYMENT_ACCEPTANCE",
-                "status": "ACTIVE"
-            }
-        ],
-        "payments_receivable": true,
-        "primary_email_confirmed": true,
-        "oauth_integrations": [
-            {
-                "integration_type": "OAUTH_THIRD_PARTY",
-                "integration_method": "PAYPAL",
-                "oauth_third_party": [
-                    {
-                        "partner_client_id": "<PARTNER_CLIENT_ID>",
-                        "merchant_client_id": "<MERCHANT_CLIENT_ID>",
-                        "scopes": [
-                            "https://uri.paypal.com/services/payments/realtimepayment",
-                            "https://uri.paypal.com/services/payments/refund",
-                            "https://uri.paypal.com/services/payments/payment/authcapture"
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+{
+    "merchant_id": "<MERCHANT_ID>",
+    "tracking_id": "<TRACKING_ID>",
+    "products": [
+        {
+            "name": "MOBILE_PAYMENT_ACCEPTANCE",
+            "status": "ACTIVE"
+        }
+    ],
+    "payments_receivable": true,
+    "primary_email_confirmed": true,
+    "oauth_integrations": [
+        {
+            "integration_type": "OAUTH_THIRD_PARTY",
+            "integration_method": "PAYPAL",
+            "oauth_third_party": [
+                {
+                    "partner_client_id": "<PARTNER_CLIENT_ID>",
+                    "merchant_client_id": "<MERCHANT_CLIENT_ID>",
+                    "scopes": [
+                        "https://uri.paypal.com/services/payments/realtimepayment",
+                        "https://uri.paypal.com/services/payments/refund",
+                        "https://uri.paypal.com/services/payments/payment/authcapture"
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 The `scopes` array in the response is important as it ensures that you have the proper permissions granted from the merchant to facilitate transactions on their behalf. Additional values for the `features` array can be found in the [`rest_endpoint_feature` documentation](https://developer.paypal.com/docs/api/partner-referrals/v2/#definition-rest_endpoint_feature "Official REST Endpoint Feature Documentation").
@@ -167,7 +167,7 @@ When you load the [PayPal JS SDK](https://developer.paypal.com/docs/checkout/ref
 
 An example `<script>` tag for loading the JS SDK into your page:
 
-```js
+```
 <script src="https://paypal.com/sdk/js?client-id=<PARTNER_CLIENT_ID>&merchant-id=<MERCHANTs_MERCHANT_ID>" data-partner-attribution-id="<PARTNER_ATTRIBUTION_ID>"></script>
 ```
 
