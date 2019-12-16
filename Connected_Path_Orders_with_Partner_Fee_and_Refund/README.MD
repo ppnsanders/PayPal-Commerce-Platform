@@ -7,7 +7,7 @@
 This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs"). This allows for a Partner to onboard a merchant and obtain permissions to facilitate transactions from the consumer (`payer`) to the merchant (`payee`).
 
 Model Diagram: 
-![Model Account Diagram](CP_O_Refund_Diagram.png)
+![Model Account Diagram](../images/CP_O_Refund_Diagram.png)
 
 **Postman Collection:** [https://documenter.getpostman.com/view/3823651/SWEB3bjN?version=latest](https://documenter.getpostman.com/view/3823651/SWEB3bjN?version=latest "Unofficial Postman Collection")
 
