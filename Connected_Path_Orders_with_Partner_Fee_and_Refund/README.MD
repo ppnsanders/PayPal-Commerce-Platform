@@ -203,6 +203,7 @@ An example response to the `/v1/customer/partners/{partner_id}/merchant-integrat
                     "merchant_client_id": "<MERCHANT_CLIENT_ID>",
                     "scopes": [
                         "https://uri.paypal.com/services/payments/realtimepayment",
+                        "https://uri.paypal.com/services/payments/partnerfee",
                         "https://uri.paypal.com/services/payments/refund",
                         "https://uri.paypal.com/services/payments/payment/authcapture"
                     ]
