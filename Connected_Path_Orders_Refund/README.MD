@@ -99,7 +99,8 @@ An example response to the `/v1/customer/partners/{partner_id}/merchant-integrat
 }
 ```
 
-    An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations/{merchant_id}` endpoint would look like this: 
+An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations/{merchant_id}` endpoint would look like this: 
+
 
 ```json
 {
