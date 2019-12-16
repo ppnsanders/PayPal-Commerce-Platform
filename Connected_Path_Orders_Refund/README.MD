@@ -19,12 +19,12 @@ The [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platfo
 
 **PayPal Sandbox Testing Credentials:**
 
-    ```json
-    {
-        "partner_client_id": "AUOlt-Vi7Qvn_nNP7uhuKQ52BRCp1uy6qJab8WzCWPLvo2cRc9h8OOHhAHvz7dnMyLdHY96XGEyq8dd_",
-        "partner_client_secret": "EFgaigTzAhleLwnb-lV8ARjlC-VUEaOyNKlaBDC2KZecVcnraGIfksmgHtB2EcgbD5lg2bbbXo-Jj0_v"
-    }
-    ```
+```json
+{
+    "partner_client_id": "AUOlt-Vi7Qvn_nNP7uhuKQ52BRCp1uy6qJab8WzCWPLvo2cRc9h8OOHhAHvz7dnMyLdHY96XGEyq8dd_",
+    "partner_client_secret": "EFgaigTzAhleLwnb-lV8ARjlC-VUEaOyNKlaBDC2KZecVcnraGIfksmgHtB2EcgbD5lg2bbbXo-Jj0_v"
+}
+```
 
 ## Authentication
 
@@ -34,8 +34,8 @@ Third-Party Authentication will allow the Partner to Authenticate to PayPal usin
 
 | PayPal Documentation |
 |:------------------------:|
-| [Get an `access_token`](https://developer.paypal.com/docs/api/overview/#get-an-access-token, "Official Authentication Doc") |
-| [Authorization Assertion Header](https://developer.paypal.com/docs/api/reference/api-requests/#paypal-auth-assertion, "Official Auth-Header Doc") |
+| [Get an `access_token`](https://developer.paypal.com/docs/api/overview/#get-an-access-token "Official Authentication Doc") |
+| [Authorization Assertion Header](https://developer.paypal.com/docs/api/reference/api-requests/#paypal-auth-assertion "Official Auth-Header Doc") |
 
 To request an `access_token` you will `POST` your `client_id` and `client_secret` to the API Endpoint (`https://api.sandbox.paypal.com/v1/oauth2/token`) with the data of your `grant_type` set to `client_credentials`. 
 
@@ -81,7 +81,7 @@ When you call the [Seller Status API](https://developer.paypal.com/docs/api/part
 
 Here is an [example of calling this API in my Postman collection](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#9e5ca33a-4dbf-46fe-afe8-e121c4dbb994 "Unofficial API Example") if you'd like to try this out.
 
-> _In the event that you have not obtained the merchant's `merchant_id` as the merchant didn't return to the `return_url` you specified when you [created the Partner Referral Token](https://developer.paypal.com/docs/api/partner-referrals/v2/#partner-referrals_create "Official Create Partner Referral API Documentation"), you can optionally use the `tracking_id` that you specified when you [created the Partner Referral Token](https://developer.paypal.com/docs/api/partner-referrals/v2/#partner-referrals_create "Official Create Partner Referral API Documentation") by calling the `merchant-integrations` endpoint using the `tracking_id`.  An example endpoint `GET` call would be `/v1/customer/partners/{partner_id}/merchant-integrations?tracking_id=<TRACKING_ID>`.  When you call that API by the `tracking_id` you will receive the `merchant_id` and the URL for the call in the response.
+> _In the event that you have not obtained the merchant's `merchant_id` as the merchant didn't return to the `return_url` you specified when you [created the Partner Referral Token](https://developer.paypal.com/docs/api/partner-referrals/v2/#partner-referrals_create "Official Create Partner Referral API Documentation"), you can optionally use the `tracking_id` that you specified when you [created the Partner Referral Token](https://developer.paypal.com/docs/api/partner-referrals/v2/#partner-referrals_create "Official Create Partner Referral API Documentation") by calling the `merchant-integrations` endpoint using the `tracking_id`.  An example endpoint `GET` call would be `/v1/customer/partners/{partner_id}/merchant-integrations?tracking_id=<TRACKING_ID>`.  When you call that API by the `tracking_id` you will receive the `merchant_id` and the URL for the call in the response._
 
 An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations?tracking_id=<TRACKING_ID>` endpoint would look like this:
 
