@@ -30,7 +30,7 @@ Inline-style:
     Third-Party Authentication will allow the Partner to Authenticate to PayPal using the Partner's `client_id` and `client_secret` to obtain an `access_token` that will be provided in the `Authentication` `header` of the API Request.  Along with the Partner's `access_token` the Partner will need to provide the `PayPal-Auth-Assertion` `header` which allows for the Partner to provide PayPal with the information on the merchant they are facilitating the API on behalf of.
 
 | PayPal Documentation |
-------------------------
+|:------------------------:|
 | [Get an `access_token`](https://developer.paypal.com/docs/api/overview/#get-an-access-token, "Official Authentication Doc") |
 | [Authorization Assertion Header](https://developer.paypal.com/docs/api/reference/api-requests/#paypal-auth-assertion, "Official Auth-Header Doc") |
 
@@ -146,7 +146,7 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
     *Why is this important?* When the script is loaded with the *Partner's* `client-id` and the *Merchant's* `merchant-id` the data associated can be tied back to the merchant to allow the merchant to offer [PayPal Store Cash](https://www.paypal.com/us/smarthelp/article/what-is-store-cash-and-how-does-it-work-faq4055) to the customer if they don't complete their checkout to help re-engage the customer.
 
 | PayPal Documentation |
-------------------------
+|:------------------------:|
 | [PayPal Checkout Smart Payment Buttons](https://developer.paypal.com/docs/checkout/ "Official PayPal Checkout Documentation") |
 | [PayPal Checkout Best Practices](https://developer.paypal.com/docs/checkout/best-practices/ "Official PayPal Checkout Best Practices Documentation") |
 | [PayPal Smart Payment Buttons Demo](https://developer.paypal.com/demo/checkout/#/pattern/server "Official PayPal Smart Payment Buttons Demo") |
@@ -155,7 +155,7 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 | [PayPal Store Cash](https://www.paypal.com/us/smarthelp/article/what-is-store-cash-and-how-does-it-work-faq4055) |
 
 | Other Links |
----------------
+|:------------------------:|
 | [Store Cash Integration](https://gist.github.com/ppnsanders/44dcb36a0ea50f17b76f9d2f0db14b0a "Unofficial Store Cash Integration Documentation") |
 
 *Implementation:*
