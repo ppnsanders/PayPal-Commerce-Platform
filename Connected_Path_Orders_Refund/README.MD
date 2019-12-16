@@ -1,4 +1,4 @@
-# PayPal Commerce Platform - Third Party Authentication - Onboarding, Checkout, and Refunds for PayPal Branded Transactions
+# PayPal Commerce Platform - Third Party Authentication - Onboarding, Checkout, and Refunds for PayPal Branded and Unbranded Transactions
 
 > **Disclaimer:** Any Applications/code/samples provided here is provided as-is.  These examples are intended to be **EXAMPLES** and are not intended to be used in a production environment.  I am employed at PayPal, however, the code/samples/documentation herein is provided from myself as an example not from PayPal, Inc.  I hope these are helpful to helping you understand the API's, but please do not use in a production environment.  Please refer to [PayPal's Developer Site](https://developer.paypal.com/ "PayPal Developer Homepage") for official documentation.
 
@@ -172,7 +172,7 @@ An example `<script>` tag for loading the JS SDK into your page:
 <script src="https://paypal.com/sdk/js?client-id=<PARTNER_CLIENT_ID>&merchant-id=<MERCHANTs_MERCHANT_ID>" data-partner-attribution-id="<PARTNER_ATTRIBUTION_ID>"></script>
 ```
 
-### PayPal Order API
+### PayPal Checkout with the Order API
 
 When the PayPal button is clicked, it calls the client-side function of `createOrder()`; within this function, you will add the code to call your server endpoint that handles the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  When you call the API to create this order you will use the `access_token` that was created using the Partner level `client_id` and `client_secret`, and you will pass the [JSON Web Token (JWT) in the `PayPal-Auth-Assertion` `header`](https://developer.paypal.com/docs/api/reference/api-requests/#paypal-auth-assertion "Official PayPal-Auth-Assertion Documentation").  In the response of the API, you will return the `id` from the `createOrder()` function on the client-side to initiate the PayPal Checkout.
 
@@ -182,8 +182,12 @@ The customer (consumer) has clicked the button, the order was created, the consu
 
 Once you call to capture the order and receive a successful response, the order is complete and the funds have been moved from the consumers account to the merchant's account.
 
+### Credit Card Checkout with the Order API
+
+This API functionality is very similar to the PayPal Checkout above; When the consumer elects to Checkout, you will start with the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  Then once you've created the Order, you will [Capture the Order](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Order Capture API Documentation"). The only difference is that you won't need to have the consumer login to PayPal, and you'll simply provide their Credit Card information in the call to [Capture the Order as seen in my Postman example](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#c651a0f4-4664-4fa6-b0df-fbfc920a3772 "Unofficial API Example").
+
 ## Refunding the Transaction
 
-When you [Capture the Order](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#cdb4ef99-abcd-488b-8617-3b09ea55f7bf "Unofficial API Example") you will want to save the `response.purchase_units[0].payments.captures[0].id` as that `id` is the "Capture ID" that you will use when you Refund the Order.  Within the `POST` to Refund the Capture, you will include the `capture_id` in the URL along with the various `headers` (`PayPal-Auth-Assertion`, `PayPal-Partner-Attribution-Id`, `PayPal-Request-Id`, and of course the `Authorization`). And you may optionally provide `amount` information, an `invoice_id`, and optionally a `note_to_payer`. 
+Once you [Capture the Order](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#cdb4ef99-abcd-488b-8617-3b09ea55f7bf "Unofficial API Example") you will want to save the `response.purchase_units[0].payments.captures[0].id` as that `id` is the "Capture ID" that you will use when you Refund the Order.  Within the `POST` to Refund the Capture, you will include the `capture_id` in the URL along with the various `headers` (`PayPal-Auth-Assertion`, `PayPal-Partner-Attribution-Id`, `PayPal-Request-Id`, and of course the `Authorization`). And you may optionally provide `amount` information, an `invoice_id`, and optionally a `note_to_payer`.  You can view my [example refund API on Postman](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#acb69b95-0f7d-4182-9908-38379f8bd2ec "Unofficial API Example").
 
 Please see the [Refund Captured Payment Documentation](https://developer.paypal.com/docs/api/payments/v2/#captures_refund "Official API Documentation") for additional info on the fields & functionality of the API.
