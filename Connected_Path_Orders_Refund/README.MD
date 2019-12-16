@@ -58,14 +58,14 @@ In [my postman sample](https://documenter.getpostman.com/view/3823651/SWEB3GUh?v
 
 Once you call successfully, in the response, you will see an `object` in the `links` array similar to below.  You may look through the [Sample & Documentation](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/#response-sample "Official PayPal Documentation") as well.
 
-    ```json
-    {
-        "href": "https://www.sandbox.paypal.com/us/merchantsignup/partner/onboardingentry?token=YTIwNDU2ODktMmMzOC00YzZiLWFlM2ItYzZmYjRkYTY4MTM2TDJXOVZ1Vk5yQTFaQitwTG1jWUs3dkNLY0VkM1NPNFBQTXNxYkkra1BCRT12Mg==",
-        "rel": "action_url",
-        "method": "GET",
-        "description": "Target WEB REDIRECT URL for the next action. Customer should be redirected to this URL in the browser."
-    }
-    ```
+```json
+{
+    "href": "https://www.sandbox.paypal.com/us/merchantsignup/partner/onboardingentry?token=YTIwNDU2ODktMmMzOC00YzZiLWFlM2ItYzZmYjRkYTY4MTM2TDJXOVZ1Vk5yQTFaQitwTG1jWUs3dkNLY0VkM1NPNFBQTXNxYkkra1BCRT12Mg==",
+    "rel": "action_url",
+    "method": "GET",
+    "description": "Target WEB REDIRECT URL for the next action. Customer should be redirected to this URL in the browser."
+}
+```
 
 While testing, you can copy/paste the value of the `href` for the `action_url` into a browser window and login with your Sandbox Merchant account to grant permissions to the Partner Account.
 
@@ -85,7 +85,7 @@ Here is an [example of calling this API in my Postman collection](https://docume
 
 An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations?tracking_id=<TRACKING_ID>` endpoint would look like this:
 
-    ```json
+```json
     {
         "merchant_id": "<MERCHANT_ID>",
         "tracking_id": "<TRACKING_ID>",
@@ -97,11 +97,11 @@ An example response to the `/v1/customer/partners/{partner_id}/merchant-integrat
             }
         ]
     }
-    ```
+```
 
     An example response to the `/v1/customer/partners/{partner_id}/merchant-integrations/{merchant_id}` endpoint would look like this: 
 
-    ```json
+```json
     {
         "merchant_id": "<MERCHANT_ID>",
         "tracking_id": "<TRACKING_ID>",
@@ -131,7 +131,7 @@ An example response to the `/v1/customer/partners/{partner_id}/merchant-integrat
             }
         ]
     }
-    ```
+```
 
 The `scopes` array in the response is important as it ensures that you have the proper permissions granted from the merchant to facilitate transactions on their behalf. Additional values for the `features` array can be found in the [`rest_endpoint_feature` documentation](https://developer.paypal.com/docs/api/partner-referrals/v2/#definition-rest_endpoint_feature "Official REST Endpoint Feature Documentation").
 
