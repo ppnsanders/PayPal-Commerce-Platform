@@ -7,7 +7,7 @@
 This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs") to onboard a merchant and obtain permissions to facilitate transactions, collect a Partner Fee from the merchant, and create and execution [PayPal Billing Agreements](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal Billing Agreement Documentation") and payments from the consumer (`payer`) to the merchant (`payee`).
 
 Model Diagram: 
-![Model Account Diagram](../images/CP_MIB_O_F_R_Diagram.png)
+![Model Account Diagram](../../images/CP_MIB_O_F_R_Diagram.png)
 
 **Postman Collection:** [https://documenter.getpostman.com/view/3823651/SWECVum1?version=latest](https://documenter.getpostman.com/view/3823651/SWECVum1?version=latest "Unofficial Postman Collection")
 
