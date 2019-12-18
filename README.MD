@@ -32,9 +32,9 @@ The use-cases listed here suit the model where the Partner has a _Hosted Platfor
 
 In this model, the Partner is simply a _facilitator_ of the transactions and will not collect a "platform fee" or "partner fee" per transaction. 
 
-Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
-Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation") and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
-Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
+* Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
+* Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation") and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
+* Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
 
 My Full Step-By-Step Readme Documentation: [Connected_Path_Orders_Refund](Connected_Path_Orders_Refund/README.MD "Unofficial Sample Document")
 
@@ -42,9 +42,9 @@ My Full Step-By-Step Readme Documentation: [Connected_Path_Orders_Refund](Connec
 
 In this model, the Partner is simply a _facilitator_ of the transactions and WILL collect a "platform fee" or "partner fee" per transaction. Besides the collection of the Partner Fee, this model is the same as the above example.
 
-Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
-Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation") and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
-Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
+* Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
+* Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation") and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
+* Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
 
 My Full Step-By-Step Readme Documentation: [Connected_Path_Orders_Fee_Refund](Connected_Path_Orders_Fee_Refund/README.MD "Unofficial Sample Document")
 
@@ -54,9 +54,9 @@ In this model, the Partner manages the creation of a Billing Agreement between t
 
 I give additional specifics of the Merchant and Consumer Billing Agreements in the [Billing-Agreements README](Billing-Agreements/README.MD).
 
-Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
-Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation"), [PayPal Billing Agreements](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal Billing Agreement Documentation"), and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
-Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
+* Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
+* Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation"), [PayPal Billing Agreements](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal Billing Agreement Documentation"), and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
+* Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
 
 My Full Step-By-Step Readme Documentation: [Connected_Path_Merchant_BA_Orders_Refund](Connected_Path_Merchant_BA_Orders_Refund/README.MD)
 
@@ -66,8 +66,8 @@ In this model, the Partner allows the Consumer (`payer`) to enter into a Billing
 
 I give additional specifics of the Partner and Consumer Billing Agreements in the [Billing-Agreements README](Billing-Agreements/README.MD).
 
-Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
-Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation"), [PayPal Billing Agreements](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal Billing Agreement Documentation"), and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
-Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
+* Merchant Onboarding Used: [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official PayPal Documentation")
+* Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation"), [PayPal Billing Agreements](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal Billing Agreement Documentation"), and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
+* Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
 
 My Full Step-By-Step Readme Documentation: [Connected_Path_Partner_BA_Orders_Refund](Connected_Path_Partner_BA_Orders_Refund/README.MD)
