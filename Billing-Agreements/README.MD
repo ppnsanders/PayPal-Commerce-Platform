@@ -25,3 +25,5 @@ This feature is similar to the capabilities of *vaulting* a funding instrument, 
 This type of Billing Agreement is an Agreement between the Consumer (`payer`) and the Partner (*Platform*).  That allows the platform to *save* the Billing Agreement for use between the consumer (`payer`) and other parties/merchant's (`payee`'s) on their platform.
 
 Consider if the Partner platform in this case is a *Marketplace*, the Partner hosts this platform and enables their customers to buy & sell items on the platform.  In this case the Consumer has a relationship with the Partner, as does the Merchant, and the *Marketplace* has agreed to the Terms & Conditions set out by the *Marketplace*.
+
+[Documentation for this case](https://github.com/ppnsanders/PayPal-Commerce-Platform/tree/master/Billing-Agreements/Connected_Path_Partner_BA_Orders_Refund "Github Page for Channel Initiated Billing with PCP")
