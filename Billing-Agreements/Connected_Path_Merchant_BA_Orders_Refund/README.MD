@@ -294,10 +294,7 @@ In the Response to that call, you will receive the Billing Agreement ID as well 
 
 ### Create Order
 
-When creating an Order that will be captured with a Billing Agreement, you will want to pass the Consumer's (`payer`'s) `payer_id` as part of that request. In the Order's `payer.payer_id` value, you will set the `payer_id` value that you received in the response from [Executing the Billing Agreement](https://developer.paypal.com/docs/limited-release/reference-transactions/#create-billing-agreement "Official PayPal API Documentation").
-
-I pass this `payer_id` in my [Create Order example in my Postman Collection](https://documenter.getpostman.com/view/3823651/SWECVum1?version=latest#bd11264a-257c-46d2-9b8f-059c36327593 "Unofficial API Example") as well.
-
+You will [create the Order](https://developer.paypal.com/docs/api/orders/v2/ "Official API Documentation") as normal and provide the information for the order, regardless if it is going to be executed with the Billing Agreement from above or with a credit card.  You can see [my postman example with minimal fields](https://documenter.getpostman.com/view/3823651/SWECVum1?version=latest#bd11264a-257c-46d2-9b8f-059c36327593 "Unofficial API Example") for reference.
 
 ### Capture Order
 
