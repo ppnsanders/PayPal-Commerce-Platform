@@ -4,7 +4,7 @@
 
 **Use-Case/Model Description:**
     
-This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs"). This allows for a Partner to onboard a merchant and obtain permissions to facilitate transactions from the consumer (`payer`) to the merchant (`payee`).
+This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs"). This allows for a Partner to onboard a merchant and obtain permissions to facilitate transactions from the consumer (`payer`) to the merchant (`payee`) and collect a Fee for each transaction.
 
 Model Diagram: 
 ![Model Account Diagram](../images/CP_O_Refund_Diagram.png)
