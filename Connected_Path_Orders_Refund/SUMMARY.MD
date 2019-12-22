@@ -76,7 +76,7 @@ The flowchart above shows the following steps:
 
 Now that we have permissions granted to the Partner, the Partner is now able to facilitate transactions on behalf of the merchant.  I will quickly go through a few components of the PayPal Checkout experience.
 
-PayPal Checkout Flowchart: 
+### PayPal Checkout Flow
 
 ![PayPal Checkout Flowchart](../images/CP_O_R_PP_XO_Flowchart.png)
 
@@ -95,7 +95,7 @@ The Flowchart above shows the following steps:
 
 
 
-## Credit Card Checkout with the Order API
+### Credit Card Checkout with the Order API
 
 Credit Card Checkout Flowchart: 
 
