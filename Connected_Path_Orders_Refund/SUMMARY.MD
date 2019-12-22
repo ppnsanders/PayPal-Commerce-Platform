@@ -71,6 +71,7 @@ The flowchart above shows the following steps:
 7. Using the `merchantIdInPayPal` value, you will call the [Show Seller Status API](https://developer.paypal.com/docs/api/partner-referrals/v1/#merchant-integration_status "Official PayPal API Documentation"). The response will contain the Merchant's `merchant_id`, `payments_receivable` status, `primary_email_confirmed` status, the `merchant_client_id`, and the `scopes` array showing the `scopes` the merchant granted to you (the Partner).
 8. You will want to **save** the information returned to you as needed, but you **will** need the `merchant_id` to [create the `PayPal-Auth-Assertion` header](https://developer.paypal.com/docs/api/reference/api-requests/#paypal-auth-assertion "Official PayPal-Auth-Assertion header Doc") that you will use when taking actions on behalf of the merchant.
 
+If you'd like to dive into these steps/API's a little further, please see my [ONBOARDING.MD](ONBOARDING.MD "Unofficial Onboarding Documentation").
 
 ## Checkout
 
@@ -93,6 +94,7 @@ The Flowchart above shows the following steps:
 9. Your (Partner) server receives the response from the PayPal API, then responds to the client with applicable information.
 10. The client receives the information and displays a "Thank You" or "Receipt Page" to the Consumer (`payer`).
 
+If you'd like to dive into these steps, the JS SDK, or APIs a little further, please see my [CHECKOUT.MD](CHECKOUT.MD "Unofficial Checkout Documentation").
 
 
 ### Credit Card Checkout with the Order API
