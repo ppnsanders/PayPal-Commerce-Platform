@@ -101,7 +101,7 @@ Credit Card Checkout Flowchart:
 
 ![Credit Card Checkout Flowchart](../images/CP_O_R_CC_XO_Flowchart.png)
 
-This Checkout Flow is very similar to the PayPal Checkout above; When the consumer elects to Checkout, you will start with the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  Then once you've created the Order, you will [Capture the Order](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Order Capture API Documentation"). The only difference is that you won't need to have the consumer login to PayPal, and you'll simply provide their Credit Card information in the call to [Capture the Order as seen in my Postman example](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#c651a0f4-4664-4fa6-b0df-fbfc920a3772 "Unofficial API Example").
+This Checkout Flow is very similar to the [PayPal Checkout Flow](#paypal-checkout-flow) above; When the consumer elects to Checkout, you will start with the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  Then once you've created the Order, you will [Capture the Order](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Order Capture API Documentation"). The only difference is that you won't need to have the consumer login to PayPal, and you'll simply provide their Credit Card information in the call to [Capture the Order as seen in my Postman example](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#c651a0f4-4664-4fa6-b0df-fbfc920a3772 "Unofficial API Example").
 
 ## Refunding the Transaction
 
