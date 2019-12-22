@@ -51,7 +51,8 @@ Additionally, feel free to review the [Official PayPal Documentation](https://de
 For this sample we'll be using PayPal's [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official Connected Path Documentation").  You may be asking _"What is Connected Path?"_.  The answer is quite straight forward, the [Connected Path Upfront Onboarding](https://developer.paypal.com/docs/commerce-platform/onboarding/upfront/ "Official Connected Path Documentation") means that the merchant can grant you (the Partner) permissions to act on their behalf, and they have agreed to the PayPal [User Agreement](https://www.paypal.com/us/webapps/mpp/ua/legalhub-full?locale.x=en_US "Official PayPal User Agreement") and will work with PayPal directly on any account inquiries.  Please read through the [PayPal Partner Program Agreement](https://www.paypal.com/us/webapps/mpp/ua/partner-program-agreement "Official Partner Program Agreement Documentation") and/or the [PayPal User Agreement](https://www.paypal.com/us/webapps/mpp/ua/legalhub-full?locale.x=en_US) for additional clarifications on the roles/responsibilities of the Partner and Merchant.
 
 Onboarding Flowchart: 
-![Onboarding Flowchart(../images/CP_O_R_Onboarding_Flowchart.png)
+
+![Onboarding Flowchart](../images/CP_O_R_Onboarding_Flowchart.png)
 
 The flowchart above shows the following steps:
 
@@ -75,7 +76,7 @@ The flowchart above shows the following steps:
 Now that we have permissions granted to the Partner, the Partner is now able to facilitate transactions on behalf of the merchant.  I will quickly go through a few components of the PayPal Checkout experience.
 
 PayPal Checkout Flowchart: 
-![PayPal Checkout Flowchart(../images/CP_O_R_PP_XO_Flowchart.png)
+![PayPal Checkout Flowchart](../images/CP_O_R_PP_XO_Flowchart.png)
 
 The Flowchart above shows the following steps:
 
@@ -95,7 +96,7 @@ The Flowchart above shows the following steps:
 ## Credit Card Checkout with the Order API
 
 Credit Card Checkout Flowchart: 
-![Credit Card Checkout Flowchart(../images/CP_O_R_CC_XO_Flowchart.png)
+![Credit Card Checkout Flowchart](../images/CP_O_R_CC_XO_Flowchart.png)
 
 This Checkout Flow is very similar to the PayPal Checkout above; When the consumer elects to Checkout, you will start with the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  Then once you've created the Order, you will [Capture the Order](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Order Capture API Documentation"). The only difference is that you won't need to have the consumer login to PayPal, and you'll simply provide their Credit Card information in the call to [Capture the Order as seen in my Postman example](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#c651a0f4-4664-4fa6-b0df-fbfc920a3772 "Unofficial API Example").
 
