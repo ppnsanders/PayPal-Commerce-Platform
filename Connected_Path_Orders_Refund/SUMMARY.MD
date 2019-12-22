@@ -7,6 +7,7 @@
 This model allows for a Partner to act as a _Facilitator_ using the [PayPal Commerce Platform](https://developer.paypal.com/docs/commerce-platform/ "Official PayPal Commerce Platform Docs"). This allows for a Partner to onboard a merchant and obtain permissions to facilitate transactions from the consumer (`payer`) to the merchant (`payee`).
 
 Model Diagram: 
+
 ![Model Account Diagram](../images/CP_O_Refund_Diagram.png)
 
 **Postman Collection:** [https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection")
@@ -76,6 +77,7 @@ The flowchart above shows the following steps:
 Now that we have permissions granted to the Partner, the Partner is now able to facilitate transactions on behalf of the merchant.  I will quickly go through a few components of the PayPal Checkout experience.
 
 PayPal Checkout Flowchart: 
+
 ![PayPal Checkout Flowchart](../images/CP_O_R_PP_XO_Flowchart.png)
 
 The Flowchart above shows the following steps:
@@ -96,6 +98,7 @@ The Flowchart above shows the following steps:
 ## Credit Card Checkout with the Order API
 
 Credit Card Checkout Flowchart: 
+
 ![Credit Card Checkout Flowchart](../images/CP_O_R_CC_XO_Flowchart.png)
 
 This Checkout Flow is very similar to the PayPal Checkout above; When the consumer elects to Checkout, you will start with the [Creation of the PayPal Order](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Order API Documentation").  Then once you've created the Order, you will [Capture the Order](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Order Capture API Documentation"). The only difference is that you won't need to have the consumer login to PayPal, and you'll simply provide their Credit Card information in the call to [Capture the Order as seen in my Postman example](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest#c651a0f4-4664-4fa6-b0df-fbfc920a3772 "Unofficial API Example").
