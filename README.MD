@@ -36,7 +36,7 @@ In this model, the Partner is simply a _facilitator_ of the transactions and wil
 * Checkout Used: [PayPal Smart Payment Buttons](https://developer.paypal.com/docs/commerce-platform/payment/checkout/ "Official PayPal Checkout Documentation") and [Orders v2 API](https://developer.paypal.com/docs/api/orders/v2/ "Official PayPal API Documentation")
 * Refunds Used: [PayPal Refund API with Payments v2 API](https://developer.paypal.com/docs/commerce-platform/refunds/ "Official PayPal Refund Documentation")
 
-My Full Step-By-Step Readme Documentation: [Connected_Path_Orders_Refund](Connected_Path_Orders_Refund/README.MD "Unofficial Sample Document")
+My Full Step-By-Step Readme Documentation: [Connected_Path_Orders_Refund](Connected_Path_Orders_Refund/SUMMARY.MD "Unofficial Sample Document")
 
 **eCommerce - Partner IS charging a per-transaction fee**
 
