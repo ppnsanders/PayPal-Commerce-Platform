@@ -25,6 +25,7 @@
         "js-yaml": "^3.13.1",
         "kraken-js": "^2.0.0",
         "lodash": "^4.17.15",
+        "lodash.merge": "^4.6.2",
         "makara": "^2.0.3",
         "request": "^2.88.0",
         "superagent": "^5.2.1",
