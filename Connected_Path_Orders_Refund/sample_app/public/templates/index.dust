@@ -1,0 +1,6 @@
+{>"layouts/master" /}
+
+{<body}
+    <{component}></{component}>
+    <script src="https://www.paypal.com/sdk/js?client-id={partner_client_id}&debug=false&components=buttons,hosted-fields&locale-country=US&locale-lang=en" data-client-token="{client_token}" data-vault="true" data-api-stage-host="api.sandbox.paypal.com"></script>
+{/body}

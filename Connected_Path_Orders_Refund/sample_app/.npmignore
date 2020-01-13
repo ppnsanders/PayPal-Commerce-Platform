@@ -1,6 +1,5 @@
-*NOTES.*
 .DS_Store
+.idea/
 .build/
 node_modules/
-components/
-.vscode/
+*.iml

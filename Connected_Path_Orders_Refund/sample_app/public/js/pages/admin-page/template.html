@@ -1,0 +1,161 @@
+<script>
+        (function(d, s, id) {
+          var js, ref = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.async = true;
+            js.src = "https://www.paypal.com/webapps/merchantboarding/js/lib/lightbox/partner.js";
+            ref.parentNode.insertBefore(js, ref);
+          }
+        }(document, "script", "paypal-js"));
+</script>
+<div class="ui grid">
+    <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+            <a class="item">
+              Dashboard
+            </a>
+            <a class="item">
+              Products
+            </a>
+            <a class="item">
+              Orders
+            </a>
+            <a class="active item">
+              Settings
+            </a>
+        </div>
+    </div>
+    <div class="twelve wide stretched column">
+        <div class="ui segment">
+            <div class="ui top attached tabular menu">
+                <a class="item">
+                    Shipping Settings
+                </a>
+                <a class="item">
+                    Tax Settings
+                </a>
+                <a class="active item">
+                    Payment Settings
+                </a>
+            </div>
+            <div class="ui bottom attached segment">
+                <div class="ui segment">
+                    <div id="nomerchant" style="display:none;" class="ui error message">
+                            <em>You must setup a Payment Method before viewing the <a style="text-decoration: underline;" href="/cart" target="_self">Consumer Cart Page</a>.</em>
+                    </div>
+                    <div id="noaccesstoken" style="display:none;" class="ui error message">
+                            <em>You must setup your Partner Credentials & Access_Token before viewing the <a style="text-decoration: underline;" href="/cart" target="_self">Consumer Cart Page</a>.</em>
+                    </div>
+                    <h2><a href="https://www.paypal.com/us/webapps/mpp/commerce-platform" target="_blank">PayPal Commerce Platform</a></h2>
+                    <p>The PayPal Commerce Platform enables you to give your customers many options when they pay.  Your customers can use their Credit/Debit Cards, PayPal, Venmo, PayPal Credit, or Many More*!</p>
+                    <div class="ui info message">
+                        <em>*Payment Methods mentioned above may NOT be available in all regions or with all account types. Please see <a href="https://www.paypal.com" target="_blank">PayPal.com</a> for additional details.</em>
+                    </div>
+                    <div class="ui grid">
+                        <div class="eight wide column">
+                            <img class="ui small image" src="/images/paypal_logo.png">
+                        </div>
+                        <div class="eight wide column">
+                            <div style="min-height: 80px;" class="ui blue segment">
+                                <a id="PPConfigButtonPPCP" data-paypal-button="true" href=[[model.action_url.ppcp]] target="PPFrame" class="ui primary button">
+                                    Connect Your PayPal Account
+                                </a>
+                                <segment-loader id="ConnectPayPalPPCPSpinner"></segment-loader>
+                                <div id="ConfigCheckPPCP" style="display: none;" class="ui centered">
+                                    <span><i class="big green check circle outline icon"></i> <strong>PayPal Credit Card Processing Enabled</strong></span>
+                                    <p>PayPal Account: <strong>[[model.config.merchant.email]]</strong></p>
+                                    <a href="https://www.sandbox.paypal.com/businessprofile/partner/consents" target="_blank">Disable</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <h2><a href="https://developer.paypal.com/docs/checkout/" target="_blank">PayPal Branded Checkout (Only)</a></h2>
+                    <p>PayPal Branded Checkout enables you to give your customers options to pay via their PayPal Venmo, PayPal Credit, or other local payment methods.*</p>
+                    <div class="ui info message">
+                        <em>*Payment Methods mentioned above may NOT be available in all regions or with all account types. Please see <a href="https://www.paypal.com" target="_blank">PayPal.com</a> for additional details.</em>
+                    </div>
+                    <div class="ui grid">
+                        <div class="eight wide column">
+                            <img class="ui small image" src="/images/paypal_branded_button.png">
+                        </div>
+                        <div class="eight wide column">
+                            <div style="min-height: 80px;" class="ui blue segment">
+                                <a id="PPConfigButtonEC" data-paypal-button="true" href=[[model.action_url.ec]] target="PPFrame" class="ui primary button">
+                                    Connect Your PayPal Account
+                                </a>
+                                <segment-loader id="ConnectPayPalECSpinner"></segment-loader>
+                                <div id="ConfigCheckEC" style="display: none;" class="ui centered">
+                                    <span><i class="big green check circle outline icon"></i> <strong>PayPal Wallet Processing Enabled</strong></span>
+                                    <p>PayPal Account: <strong>[[model.config.merchant.email]]</strong></p>
+                                    <a href="https://www.sandbox.paypal.com/businessprofile/partner/consents" target="_blank">Disable</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ButtonConfigOptions" style="margin-top: 20px; display:none;">
+                        <div class="ui styled fluid accordion">
+                            <div class="active title">
+                            <i class="dropdown icon"></i>
+                            PayPal Button Styles
+                            </div>
+                            <div id="buttonStyles" class="active content">
+                                <div class="ui grid">
+                                    <div class="ten wide column">
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <label>Button Layout</label>
+                                                <input type="text" name="layout" ng-model="model.config.buttonConfig.style.layout" ng-change="model.styleUpdate()">
+                                            </div>
+                                            <div class="field">
+                                                <label>Button Color</label>
+                                                <input type="text" name="color" ng-model="model.config.buttonConfig.style.color" ng-change="model.styleUpdate()">
+                                            </div>
+                                            <div class="field">
+                                                <label>Button Shape</label>
+                                                <input type="text" name="shape" ng-model="model.config.buttonConfig.style.shape" ng-change="model.styleUpdate()">
+                                            </div>
+                                            <div class="field">
+                                                <label>Button Label</label>
+                                                <input type="text" name="label" ng-model="model.config.buttonConfig.style.label" ng-change="model.styleUpdate()">
+                                            </div>
+                                            <div class="field">
+                                                <label>Button Tagline</label>
+                                                <input type="text" name="tagline" ng-model="model.config.buttonConfig.style.tagline" ng-change="model.styleUpdate()">
+                                            </div>
+                                            <div class="ui buttons">
+                                                <button class="ui button" ng-click="model.cancelButtonUpdates()">Cancel</button>
+                                                <div class="or"></div>
+                                                <button class="ui positive button" ng-click="model.saveButtonUpdates()">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="six wide column">
+                                        <display-button updateId="[[model.updateId]]"></display-button>
+                                    </div>
+                                </div>
+                                <!--<div class="title">
+                                    <i class="dropdown icon"></i>
+                                    What kinds of dogs are there?
+                                </div>
+                                <div class="content">
+                                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+                                </div>
+                                <div class="title">
+                                    <i class="dropdown icon"></i>
+                                    How do you acquire a dog?
+                                </div>
+                                <div class="content">
+                                    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+                                    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+                                </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

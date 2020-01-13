@@ -1,0 +1,14 @@
+{
+  "generator-kraken": {
+    "taskModule": "grunt",
+    "lintModule": "eslint",
+    "description": "PayPal Commerce Platform using Connected Path Upfront Onboarding, Orders v2, and Refunds.",
+    "author": "Nate Sanders",
+    "templateModule": "makara",
+    "i18n": false,
+    "componentPackager": "bower",
+    "cssModule": "less",
+    "jsModule": false,
+    "useJson": null
+  }
+}

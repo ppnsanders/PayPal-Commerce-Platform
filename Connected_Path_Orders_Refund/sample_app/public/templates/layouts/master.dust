@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{+title /}</title>
+    
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/components/semantic/dist/semantic.min.css">
+        <script src="/components/jquery/dist/jquery.min.js"></script>
+        <script src="/components/semantic/dist/semantic.min.js"></script>
+        <script src="/components/angular/angular.min.js"></script>
+        <script src="/components/angular-cookies/angular-cookies.min.js"></script>
+        <script src="/js/app.js"></script>
+        <link rel="stylesheet" href="https://www.paypalobjects.com/ui-web/vx-pattern-lib/latest/vx-lib.min.css"/>
+        <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://www.paypalobjects.com/digitalassets/c/paypal-ui/fonts/PayPalSansSmall-Regular.woff2">
+        <base href="/">
+    </head>
+    <body>
+
+        <div id="wrapper" ng-app="pcpcpor">
+            <header-nav></header-nav>
+            <div style="margin-top: 60px" class="ui main container">
+                {+body /}
+            </div>
+            <footer-nav></footer-nav>
+        </div>
+
+        <!-- Angular Services -->
+        <script src="/js/pages/config-page/api.service.js"></script>
+        <script src="/js/pages/admin-page/api.service.js"></script>
+        <script src="/js/pages/cart-page/api.service.js"></script>
+        <script src="/js/pages/receipt-page/api.service.js"></script>
+        <script src="/js/pages/cancel-page/api.service.js"></script>
+        <script src="/js/pages/xoerror-page/api.service.js"></script>
+
+        <!-- Angular Pages -->
+        <script src="/js/pages/home-page/directive.js"></script>
+        <script src="/js/pages/config-page/directive.js"></script>
+        <script src="/js/pages/admin-page/directive.js"></script>
+        <script src="/js/pages/cart-page/directive.js"></script>
+        <script src="/js/pages/receipt-page/directive.js"></script>
+        <script src="/js/pages/cancel-page/directive.js"></script>
+        <script src="/js/pages/xoerror-page/directive.js"></script>
+
+        <!-- Angular Partials -->
+        <script src="/js/partials/header-nav/directive.js"></script>
+        <script src="/js/partials/footer-nav/directive.js"></script>
+        <script src="/js/partials/segment-loader/directive.js"></script>
+        <script src="/js/partials/display-button/directive.js"></script>
+        
+    </body>
+</html>

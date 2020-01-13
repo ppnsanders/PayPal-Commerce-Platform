@@ -1,0 +1,24 @@
+{
+  "name": "sample-app",
+  "description": "PayPal Commerce Platform using Connected Path Upfront Onboarding, Orders v2, and Refunds.",
+  "main": "index.js",
+  "author": "Nate Sanders",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.9",
+    "semantic": "^2.4.1",
+    "jquery": "^3.4.1",
+    "angular-cookies": "^1.7.9"
+  }
+}

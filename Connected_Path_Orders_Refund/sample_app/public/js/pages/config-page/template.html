@@ -1,0 +1,63 @@
+<div id="configModal" class="ui large modal">
+        <div class="ui icon header">
+          <i class="cogs icon"></i>
+          Partner Configuration
+        </div>
+        <div class="content">
+              <form id="configured" class="ui form">
+                <div class="field">
+                  <label>Partner Email:</label>
+                  <input id="pEmail" type="text" name="pEmail" ng-model="model.config.partner.email" required>
+                </div>
+                <div class="field">
+                    <label>Partner Merchant_ID:</label>
+                    <input id="pMerchantId" type="text" name="pMerchantId" ng-model="model.config.partner.merchant_id" required>
+                </div>
+                <div class="field">
+                  <label>Partner Client ID:</label>
+                  <input type="text" name="pClientId" ng-model="model.config.partner.client_id" required>
+                </div>
+                <div class="field">
+                  <label>Partner Client Secret</label>
+                  <input type="text" name="pClientSecret" ng-model="model.config.partner.client_secret" required>
+                </div>
+                <div class="field">
+                    <label>Partner Attribution Id</label>
+                    <input type="text" name="pAttributionId" ng-model="model.config.partner.attributionId" required>
+                </div>
+                <div class="field">
+                    <label>Partner Brand Name</label>
+                    <input type="text" name="pBrandName" ng-model="model.config.partner.brandName" required>
+                </div>
+                <div id="accessTokenField" class="disabled field" style="display: none;">
+                  <label>Access Token:</label>
+                  <input type="text" name="access_token" ng-model="model.config.partner.access_token">
+                </div>
+              </form>
+              <div id="errorMsg" class="ui error message" style="display: none;"> ERROR!!
+                  <li ng-repeat="msg in model.errorMsg.message">
+                      [[msg]]
+                  </li>
+              </div>
+              <div id="configModalLoading" style="display: none;">
+                      <segment-loader></segment-loader>
+              </div>
+        </div>
+        <div class="actions">
+            <div id="useDefaultButton" ng-click="model.useDefault()" class="ui red submit button">
+            <i class="redo icon"></i>
+            Use Default Creds
+          </div>
+          <div id="cancelEditButton" ng-click="model.cancelEditConfig()" class="ui red submit button">
+            <i class="remove icon"></i>
+            Cancel
+          </div>
+          <div id="saveSettingsButton" ng-click="model.saveSettings()" class="ui green submit button">
+            <i class="checkmark icon"></i>
+            Save Settings
+          </div>
+        </div>
+      </div>
+      
+      
+      

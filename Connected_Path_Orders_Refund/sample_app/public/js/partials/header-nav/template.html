@@ -1,0 +1,10 @@
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+	        <a href="/" target="_self" class="header item">PayPal Commerce Platform - CP_O_R </a>
+	        <a ng-repeat="link in nav" href="[[link.url]]" target="_self" class="item">[[link.text]]</a>
+	    <div ng-if="showSettings" class="right menu">
+			<a class="item" style="float: right;" id="settingsButton" ng-click="showConfigModal()"><i class="cogs icon"></i></a>
+		</div>
+    </div>
+</div>
+<config-page></config-page>
