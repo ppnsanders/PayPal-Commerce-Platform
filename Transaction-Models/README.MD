@@ -12,7 +12,7 @@ These transaction models will address the various models needed within the Partn
 
 **Delayed:** The funds are held for a finite number of days (In the U.S. the number of days is 28). The Partner can release the funds through a [referenced payout](https://developer.paypal.com/docs/api/referenced-payouts/v1/#referenced-payouts-items_create "Official PayPal Documentation"). Otherwise, the funds disbursed automatically after the specified duration (In the U.S. this would be after 28 days). [Official PayPal Documentation on Delayed Disbursements](https://developer.paypal.com/docs/commerce-platform/v1/payouts/delayed-disbursement/?mark=delayed%20 "Official PayPal Documentation").
 
-> **Note:** _When using delayed disbursements, ensure that you request the [`DELAY_FUNDS_DISBURSEMENT` feature](https://developer.paypal.com/docs/api/partner-referrals/v2/#definition-third_party_details "Official PayPal Documentation") when onboarding your merchant so you have the proper permissions to delay disbursements to that merchant.
+> **Note:** _When using delayed disbursements, ensure that you request the [`DELAY_FUNDS_DISBURSEMENT` feature](https://developer.paypal.com/docs/api/partner-referrals/v2/#definition-third_party_details "Official PayPal Documentation") when onboarding your merchant so you have the proper permissions to delay disbursements to that merchant._
 
 ## "Sale" or "Capture" Model
 
