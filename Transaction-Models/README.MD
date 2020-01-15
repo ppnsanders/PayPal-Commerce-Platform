@@ -34,8 +34,8 @@ These transaction models will address the various models needed within the Partn
 **Example Steps:**
 1. Order is created via the [Create Order API](https://developer.paypal.com/docs/api/orders/v2/#orders_create "Official PayPal Documentation").
 2. Buyer (`payer`) authorizes the Order on PayPal.
-3. The buyer (`payer`) returns to the site and the [order is captured via API](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Documentation"), the money moves from the buyer (`payer`) to PayPal and is "held".
-4. Partner disburses the funds via the [Referenced Payout Item API](https://developer.paypal.com/docs/api/referenced-payouts/v1/#referenced-payouts-items_create "Official PayPal Documentation"), to move the funds from the PayPal "hold" to the merchant (`payee`).
+3. The buyer (`payer`) returns to the site and the [order is captured via API](https://developer.paypal.com/docs/api/orders/v2/#orders_capture "Official PayPal Documentation"). The [`payment_instruction`](https://developer.paypal.com/docs/api/payments/v2/#definition-payment_instruction "Official PayPal Documentation") in the capture API would have `disbusement_mode` set to `DELAYED`. The funds would move from the buyer (`payer`) to PayPal and would be _"held"_ awaiting disbursement.
+4. Based on the Partner's logic, the partner disburses the funds via the [Referenced Payout Item API](https://developer.paypal.com/docs/api/referenced-payouts/v1/#referenced-payouts-items_create "Official PayPal Documentation"), to move the funds from the PayPal "hold" to the merchant (`payee`).
 
 ## Authorization & Capture Model
 
