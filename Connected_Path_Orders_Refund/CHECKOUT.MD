@@ -1,6 +1,6 @@
 # Detailed Onboarding Information 
 
-This builds upon the section in the [SUMMARY.MD](../SUMMARY.MD#checkout "Link to SUMMARY.MD") for [Onboarding via Connected Path](../SUMMARY.MD#checkout "Link to Checkout Section") section to detail the API's used and presented in the [associated Postman Collection](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection").
+This builds upon the section in the [README.MD](../README.MD#checkout "Link to README.MD") for [Onboarding via Connected Path](../README.MD#checkout "Link to Checkout Section") section to detail the API's used and presented in the [associated Postman Collection](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection").
 
 
 ## Smart Payment Buttons & the JS SDK

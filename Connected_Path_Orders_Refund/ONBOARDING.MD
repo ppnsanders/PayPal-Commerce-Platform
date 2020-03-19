@@ -1,6 +1,6 @@
 # Detailed Onboarding Information 
 
-This builds upon the section in the [SUMMARY.MD](../SUMMARY.MD#onboarding-via-connected-path "Link to SUMMARY.MD") for [Onboarding via Connected Path](../SUMMARY.MD#onboarding-via-connected-path "Link to Onboarding via Connected Path Section") section to detail the API's used and presented in the [associated Postman Collection](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection").
+This builds upon the section in the [README.MD](../README.MD#onboarding-via-connected-path "Link to README.MD") for [Onboarding via Connected Path](../README.MD#onboarding-via-connected-path "Link to Onboarding via Connected Path Section") section to detail the API's used and presented in the [associated Postman Collection](https://documenter.getpostman.com/view/3823651/SWEB3GUh?version=latest "Unofficial Postman Collection").
 
 
 ## Partner-Referrals API:
