@@ -40,8 +40,8 @@
         "grunt-copy-to": "0.0.10",
         "grunt-dustjs": "^1.4.0",
         "grunt-eslint": "^22.0.0",
-        "grunt-mocha-cli": "^5.0.0",
-        "mocha": "^7.0.0",
+        "grunt-mocha-cli": "^7.0.0",
+        "mocha": "^10.2.0",
         "supertest": "^0.9.0"
     }
 }
